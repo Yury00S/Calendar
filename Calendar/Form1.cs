@@ -16,5 +16,11 @@ namespace Calendar
         {
             InitializeComponent();
         }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 about_program = new Form2();
+            about_program.ShowDialog();
+        }
     }
 }

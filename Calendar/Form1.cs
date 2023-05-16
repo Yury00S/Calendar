@@ -22,5 +22,11 @@ namespace Calendar
             Form2 about_program = new Form2();
             about_program.ShowDialog();
         }
+
+        private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 add = new Form3();
+            add.ShowDialog();
+        }
     }
 }

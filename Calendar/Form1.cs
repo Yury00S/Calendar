@@ -28,5 +28,15 @@ namespace Calendar
             Form3 add = new Form3();
             add.ShowDialog();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

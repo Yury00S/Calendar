@@ -26,15 +26,26 @@ namespace Calendar
         private void добавитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 add = new Form3();
-            add.ShowDialog();
-            /* коряво но работает
-             Items содержит коллекцию ListViewItem (это как раз столбцы на форме).
-            Нам же нужно обратиться к этим столбцам и добавить в них информацию.
-            Т.е. нужны подстолбцы (SubItems). И уже в них занести массив
-            непонятно как?...
+            //if (add.ShowDialog()==DialogResult.OK)
+            //{
+            //    listView1.Items.Add("");
+            //    foreach (ListViewItem item in listView1.Items)
+            //    {
+            //        item.SubItems.AddRange(add.Name_Text, )
+            //    }
+            //}
 
-             Прописать логическую цепочку listView.Items.SubItem.AddRange()
-             */
+
+
+            //см видео 16.04.23 59:05
+            //коряво но работает
+            // Items содержит коллекцию ListViewItem (это как раз столбцы на форме).
+            //Нам же нужно обратиться к этим столбцам и добавить в них информацию.
+            //Т.е. нужны подстолбцы (SubItems). И уже в них занести массив
+
+
+            if (add.ShowDialog()==DialogResult.OK)
+            {
             string[] arr = new string[4];
             arr[0]=null;
             arr[1]=add.Name_Text;
@@ -43,6 +54,8 @@ namespace Calendar
             ListViewItem item;
             item=new ListViewItem(arr);
             listView1.Items.Add(item);
+            }
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
